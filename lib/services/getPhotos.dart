@@ -6,13 +6,18 @@ import 'package:http/http.dart' as http;
 //Future<Photo> getPhotos() async {
 //
 Future getPhotos() async {
-  var url = 'https://jsonplaceholder.typicode.com/photos';
-  var response = await http.get(Uri.parse(url));
-  return response.body;
-  // var responseJson = jsonDecode(response.body);
-  // var photos = Photo.fromJson(responseJson);
+  try {
+    var url = 'https://jsonplaceholder.typicode.com/photos';
+    var response = await http.get(Uri.parse(url));
+    return response.body;
+    print(response.body);
+    // var responseJson = jsonDecode(response.body);
+    // var photos = Photo.fromJson(responseJson);
 
-  // return photos;
+    // return photos;
+  } catch (e) {
+    print(e);
+  }
 }
 
 // class Photo {
