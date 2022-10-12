@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
-            backgroundColor: Colors.purple,
+            backgroundColor: Colors.blue[700],
             fixedColor: Colors.white,
             unselectedItemColor: Colors.black,
             currentIndex: _selectedItem,
@@ -35,6 +35,7 @@ class _MyAppState extends State<MyApp> {
               BottomNavigationBarItem(icon: Icon(Icons.camera), label: 'Camera')
             ]),
         appBar: AppBar(
+          backgroundColor: Colors.blue[700],
           title: Text('Minha Applicação'),
         ),
         body: IndexedStack(

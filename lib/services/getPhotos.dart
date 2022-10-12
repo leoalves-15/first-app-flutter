@@ -10,7 +10,7 @@ Future getPhotos() async {
     var url = 'https://jsonplaceholder.typicode.com/photos';
     var response = await http.get(Uri.parse(url));
     return response.body;
-    print(response.body);
+    // print(response);
     // var responseJson = jsonDecode(response.body);
     // var photos = Photo.fromJson(responseJson);
 
